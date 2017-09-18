@@ -2,7 +2,7 @@
 <!-- SPLATOON WEAPON GENERATOR: Inspired by BloatedCreeper, improved by some rando. -->
 <html>
 	<head>
-		<title>Splatoon Weapon Roulette</title>
+		<title>Splatoon 2 Weapon Roulette</title>
 	</head>
 	<body style="background-image: url(assets/bg.png); background-size: cover;">
 		<style>
@@ -38,17 +38,19 @@
 			<button style="height: 50px; width: 125px" onclick="shuffleWeapons()">The Button</button>
 		</div>
 		<div class="categories">
-			<br>&nwnear; [Shooters <input type="checkbox" id="check0" checked>] &nwnear; [Blasters <input type="checkbox" id="check1" checked>] &nwnear; [Rollers <input type="checkbox" id="check2" checked>] &nwnear; [Chargers <input type="checkbox" id="check3" checked>] &nwnear; [Brushes <input type="checkbox" id="check4" checked>] &nwnear; [Sloshers <input type="checkbox" id="check5" checked>] &nwnear; [Splatlings <input type="checkbox" id="check6" checked>] &nwnear;
+			<br>&nwnear; [Shooters <input type="checkbox" id="check0" checked>] &nwnear; [Dualies <input type="checkbox" id="check1" checked>] &nwnear; [Blasters <input type="checkbox" id="check2" checked>] &nwnear; [Rollers <input type="checkbox" id="check3" checked>] &nwnear; [Chargers <input type="checkbox" id="check4" checked>] &nwnear; [Brushes <input type="checkbox" id="check5" checked>] &nwnear; [Sloshers <input type="checkbox" id="check6" checked>] &nwnear; [Splatlings <input type="checkbox" id="check7" checked>] &nwnear; [Brellas <input type="checkbox" id="check8" checked>] &nwnear;
 		</div>
 		<p>RULES:<br><br>1. You must use the rolled weapon until you win a game or top score.<br><br>2. If playing with more than one person, only the highest scoring people and winners may change.</p>
 		<script>
-			var weapons = [['Splattershot Jr.', 'Custom Splattershot Jr.', 'Splattershot/Hero Shot Replica', 'Tentatek Splattershot/Octoshot Replica', 'Wasabi Splattershot', 'Splattershot Pro', 'Forge Splattershot Pro', 'Berry Splattershot Pro', 'Aerospray MG', 'Aerospray RG', 'Aerospray PG', 'Jet Squelcher', 'Custom Jet Squelcher', 'Dual Squelcher', 'Custom Dual Squelcher', 'L-3 Nozzlenose', 'L-3 Nozzlenose D', 'H-3 Nozzlenose', 'H-3 Nozzlenose D', 'Cherry H-3 Nozzlenose', 'N-ZAP \'85', 'N-ZAP \'89', 'N-ZAP \'83', 'Splash-o-matic', 'Neo Splash-o-matic', 'Sploosh-o-matic', 'Neo Sploosh-o-matic', 'Sploosh-o-matic 7', '.52 Gal', '.52 Gal Deco', '.96 Gal', '.96 Gal Deco'],
-			['Blaster', 'Custom Blaster', 'Rapid Blaster', 'Rapid Blaster Deco', 'Rapid Blaster Pro', 'Rapid Blaster Pro Deco', 'Range Blaster', 'Custom Range Blaster', 'Grim Range Blaster', 'Luna Blaster', 'Luna Blaster Neo'],
-			['Splat Roller/Hero Roller Replica', 'Krak-On Splat Roller', 'CoroCoro Splat Roller', 'Carbon Roller', 'Carbon Roller Deco', 'Dynamo Roller', 'Gold Dynamo Roller', 'Tempered Dynamo Roller'],
-			['Splat Charger/Hero Charger Replica', 'Kelp Splat Charger', 'Bento Splat Charger',  'Splatterscope', 'Kelp Splatterscope', 'Bento Splatterscope', 'E-liter 3k', 'Custom E-liter 3k', 'E-liter 3k Scope', 'Custom E-liter 3k Scope', 'Classic Squiffer', 'New Squiffer', 'Fresh Squiffer', 'Bamboozler 14 Mk I', 'Bamboozler 14 Mk II', 'Bamboozler 14 MK III'],
-			['Inkbrush', 'Inkbrush Nouveau', 'Permanent Inkbrush', 'Octobrush', 'Octobrush Nouveau'],
-			['Slosher', 'Slosher Deco', 'Soda Slosher', 'Tri-Slosher', 'Tri-Slosher Nouveau', 'Sloshing Machine', 'Sloshing Machine Neo'],
-			['Heavy Splatling', 'Heavy Splatling Deco', 'Heavy Splatling Remix', 'Mini Splatling', 'Zink Mini Splatling', 'Refurbished Mini Splatling', 'Hydra Splatling', 'Custom Hydra Splatling']];
+			var weapons = [['Splattershot/Hero Shot Replica', 'Tentatek Splattershot', 'Splattershot Jr.', 'Custom Splattershot Jr.', 'Splattershot Pro', 'Forge Splattershot Pro', 'N-ZAP \'85', 'Jet Squelcher', 'Splash-o-matic', 'Sploosh-o-matic', 'Aerospray MG', 'Aerospray RG', '.52 Gal', '.96 Gal', 'L-3 Nozzlenose', 'H-3 Nozzlenose'],
+			['Splat Dualies/Hero Dualie Replicas', 'Enperry Splat Dualies', 'Dapple Dualies', 'Dualie Squelchers'],
+			['Blaster/Hero Blaster Replica', 'Custom Blaster', 'Rapid Blaster', 'Luna Blaster', 'Clash Blaster'],
+			['Splat Roller/Hero Roller Replica', 'Krak-On Splat Roller', 'Carbon Roller', 'Dynamo Roller', 'Flingza Roller'],
+			['Splat Charger/Hero Charger Replica', 'Splatterscope', 'Firefin Splat Charger', 'Firefin Splatterscope', 'E-liter 4k', 'E-liter 4k Scope', 'Classic Squiffer', 'Goo Tuber'],
+			['Inkbrush/Herobrush Replica', 'Octobrush'],
+			['Slosher/Hero Slosher Replica', 'Tri-Slosher', 'Sloshing Machine'],
+			['Heavy Splatling/Hero Splatling Replica', 'Heavy Splatling Deco', 'Mini Splatling'],
+			['Splat Brella/Hero Brella Replica', 'Tenta Brella']];
 			var selectedWeapons = [];
 			var shuffleWeapons = function()
 			{
@@ -78,7 +80,7 @@
 			};
 		</script>
 		<div style="position: relative">
-			<p style="position: fixed; bottom: 0; width:100%; text-align: center; font-size: 100%;"> If you like this little tool, keep it between us. Don't tell anybody.
+			<p style="position: fixed; bottom: 0; width:100%; text-align: center; font-size: 100%;"> If you like this little tool, keep it between us. Don't tell anybody.<br />Updated: 9/18/17, Added Tenta Brella
 			</p>
 		</div>
 	</body>
