@@ -42,15 +42,15 @@
 		</div>
 		<p>RULES:<br><br>1. You must use the rolled weapon until you win a game or top score.<br><br>2. If playing with more than one person, only the highest scoring people and winners may change.</p>
 		<script>
-			var weapons = [['Splattershot/Hero Shot Replica', 'Tentatek Splattershot', 'Splattershot Jr.', 'Custom Splattershot Jr.', 'Splattershot Pro', 'Forge Splattershot Pro', 'N-ZAP \'85', 'Jet Squelcher', 'Splash-o-matic', 'Sploosh-o-matic', 'Aerospray MG', 'Aerospray RG', '.52 Gal', '.96 Gal', 'L-3 Nozzlenose', 'H-3 Nozzlenose'],
-			['Splat Dualies/Hero Dualie Replicas', 'Enperry Splat Dualies', 'Dapple Dualies', 'Dualie Squelchers'],
-			['Blaster/Hero Blaster Replica', 'Custom Blaster', 'Rapid Blaster', 'Luna Blaster', 'Clash Blaster'],
-			['Splat Roller/Hero Roller Replica', 'Krak-On Splat Roller', 'Carbon Roller', 'Dynamo Roller', 'Flingza Roller'],
-			['Splat Charger/Hero Charger Replica', 'Splatterscope', 'Firefin Splat Charger', 'Firefin Splatterscope', 'E-liter 4k', 'E-liter 4k Scope', 'Classic Squiffer', 'Goo Tuber'],
-			['Inkbrush/Herobrush Replica', 'Octobrush'],
-			['Slosher/Hero Slosher Replica', 'Tri-Slosher', 'Sloshing Machine'],
-			['Heavy Splatling/Hero Splatling Replica', 'Heavy Splatling Deco', 'Mini Splatling'],
-			['Splat Brella/Hero Brella Replica', 'Tenta Brella']];
+			var weapons = [['Splattershot/Hero Shot Replica', 'Tentatek Splattershot/Octo Shot Replica', 'Kensa Splattershot', 'Splattershot Jr.', 'Custom Splattershot Jr.', 'Kensa Splattershot Jr.', 'Splattershot Pro', 'Forge Splattershot Pro', 'Kensa Splattershot Pro', 'N-ZAP \'85', 'N-ZAP \'89', 'N-ZAP \'83', 'Jet Squelcher', 'Custom Jet Squelcher', 'Splash-o-matic', 'Neo Splash-o-matic', 'Sploosh-o-matic', 'Neo Sploosh-o-matic', 'Sploosh-o-matic 7', 'Aerospray MG', 'Aerospray RG', 'Aerospray PG', '.52 Gal', '.52 Gal Deco', 'Kensa .52 Gal', '.96 Gal', '.96 Gal Deco', 'Kensa L-3 Nozzlenose', 'L-3 Nozzlenose', 'L-3 Nozzlenose D', 'H-3 Nozzlenose', 'H-3 Nozzlenose D', 'Cherry H-3 Nozzlenose', 'Squeezer', 'Foil Squeezer'],
+			['Splat Dualies/Hero Dualie Replicas', 'Enperry Splat Dualies', 'Kensa Splat Dualies', 'Dapple Dualies', 'Dapple Dualies Nouveau', 'Clear Dapple Dualies', 'Dualie Squelchers', 'Custom Dualie Squelchers', 'Dark Tetra Dualies', 'Light Tetra Dualies', 'Glooga Dualies', 'Glooga Dualies Deco', 'Kensa Glooga Dualies'],
+			['Blaster/Hero Blaster Replica', 'Custom Blaster', 'Range Blaster', 'Custom Range Blaster', 'Grim Range Blaster', 'Rapid Blaster', 'Rapid Blaster Deco', 'Kensa Rapid Blaster', 'Rapid Blaster Pro', 'Rapid Blaster Pro Deco', 'Luna Blaster', 'Luna Blaster Neo', 'Kensa Luna Blaster', 'Clash Blaster', 'Clash Blaster Neo'],
+			['Splat Roller/Hero Roller Replica', 'Krak-On Splat Roller', 'Kensa Splat Roller', 'Carbon Roller', 'Carbon Roller Deco', 'Dynamo Roller', 'Gold Dynamo Roller', 'Kensa Dynamo Roller', 'Flingza Roller', 'Foil Flingza Roller'],
+			['Splat Charger/Hero Charger Replica', 'Splatterscope', 'Firefin Splat Charger', 'Firefin Splatterscope', 'Kensa Charger', 'Kensa Splatterscope', 'E-liter 4k', 'E-liter 4k Scope', 'Custom E-liter 4K', 'Custom E-liter 4k Scope', 'Classic Squiffer', 'New Squiffer', 'Fresh Squiffer', 'Goo Tuber', 'Custom Goo Tuber', 'Bamboozler 14 Mk I', 'Bamboozler 14 Mk II', 'Bamboozler 14 Mk III'],
+			['Inkbrush/Herobrush Replica', 'Inkbrush Nouveau', 'Permanent Inkbrush', 'Octobrush', 'Octobrush Nouveau', 'Kensa Octobrush'],
+			['Slosher/Hero Slosher Replica', 'Slosher Deco', 'Soda Slosher', 'Tri-Slosher', 'Tri-Slosher Nouveau', 'Sloshing Machine', 'Sloshing Machine Neo', 'Kensa Sloshing Machine', 'Bloblobber', 'Bloblobber Deco', 'Explosher', 'Custom Explosher'],
+			['Heavy Splatling/Hero Splatling Replica', 'Heavy Splatling Deco', 'Heavy Splatling Remix', 'Mini Splatling', 'Zink Mini Splatling', 'Kensa Mini Splatling', 'Ballpoint Splatling', 'Ballpoint Splatling Nouveau', 'Hydra Splatling', 'Custom Hydra Splatling', 'Nautilus 47', 'Nautilus 79'],
+			['Splat Brella/Hero Brella Replica', 'Undercover Brella', 'Undercover Sorella Brella', 'Kensa Undercover Brella', 'Sorella Brella', 'Tenta Brella', 'Tenta Camo Brella', 'Tenta Sorella Brella']];
 			var selectedWeapons = [];
 			var shuffleWeapons = function()
 			{
@@ -80,7 +80,7 @@
 			};
 		</script>
 		<div style="position: relative">
-			<p style="position: fixed; bottom: 0; width:100%; text-align: center; font-size: 100%;"> If you like this little tool, keep it between us. Don't tell anybody.<br />Updated: 9/18/17, Added Tenta Brella
+			<p style="position: fixed; bottom: 0; width:100%; text-align: center; font-size: 100%;"> If you like this little tool, keep it between us. Don't tell anybody.<br />Updated: 6/24/20, Added Final Weapons.
 			</p>
 		</div>
 	</body>
